@@ -14,7 +14,6 @@ OUT = Ponto.out
 all: compile clean execute
 
 compile:
-	@mkdir obj
 	$(GCC) $(CFLAGS) -I $(HDS_PATH) -c $(SRC_TIME) -o $(OBJ_TIME)
 	$(GCC) $(CFLAGS) -I $(HDS_PATH) -c $(MAIN) -o $(OBJ_MAIN)
 	$(GCC) $(CFLAGS) $(OBJ_MAIN) $(OBJ_TIME) -o $(OUT)
@@ -24,5 +23,5 @@ execute:
 	@./$(OUT)
 
 clean:
-	@rm obj/main.o
+	@rm obj/*.o
 
