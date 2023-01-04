@@ -1,11 +1,15 @@
 #include "Time_Ponto.hpp"
 
+//============================
+//	PUBLIC
+//============================
 Time_Ponto::Time_Ponto()
 {
     now = std::chrono::system_clock::now();
 	t_c = std::chrono::system_clock::to_time_t(now);
 
-	std::cout << std::put_time(std::localtime(&t_c), "%F %T.\n");
+	std::cout << "*** PONTO ELETRONICO ***\n";
+	std::cout << std::put_time(std::localtime(&t_c), "Acessado: %D %T\n\n");
 }
 
 Time_Ponto::Time_Ponto(int h, int min, int s)
@@ -25,6 +29,19 @@ Time_Ponto::Time_Ponto(int h, int min, int s)
 }
 
 Time_Ponto::~Time_Ponto()
+{
+
+}
+
+//============================
+//	PROTECTED
+//============================
+
+
+//============================
+//	PRIVATE
+//============================
+void Time_Ponto::menu()
 {
 
 }

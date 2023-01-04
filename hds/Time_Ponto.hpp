@@ -20,6 +20,8 @@ class Time_Ponto
 		protected:
 
 		private:
+			void menu();
+
 			int hh;
 			int min;
 			int sec;
